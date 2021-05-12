@@ -1,0 +1,3596 @@
+{
+  "DungeonFacet": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "DungeonHeartClaimed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "PlayerInfluenceInRegionUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Player",
+            "name": "data",
+            "type": "tuple"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          }
+        ],
+        "name": "PlayerInitialized",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Player",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "PlayerUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "miner",
+            "type": "address"
+          }
+        ],
+        "name": "RegionMined",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256[]",
+                "name": "tiles",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastSpawnTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "firstMiner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "creatures",
+                "type": "uint256[]"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Region",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "RegionUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "energy",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastEnergyUpdateTimestamp",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Settlement",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "SettlementUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          }
+        ],
+        "name": "TileClaimed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "submittedTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileDelayedActionType",
+                "name": "delayedActionType",
+                "type": "uint8"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.TileDelayedAction",
+            "name": "delayedAction",
+            "type": "tuple"
+          }
+        ],
+        "name": "TileDelayedActionCompleted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "submittedTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileDelayedActionType",
+                "name": "delayedActionType",
+                "type": "uint8"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.TileDelayedAction",
+            "name": "delayedAction",
+            "type": "tuple"
+          }
+        ],
+        "name": "TileDelayedActionInitiated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.HarvestableGroundResources",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "TileHarvestableGroundResourcesUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint32",
+            "name": "timestamp",
+            "type": "uint32"
+          }
+        ],
+        "name": "TileLastHarvestTimestampUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "touchable",
+            "type": "bool"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "miner",
+            "type": "address"
+          }
+        ],
+        "name": "TileMined",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          }
+        ],
+        "name": "TileUnwalled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "enum LibTypes.TileUpgrade",
+            "name": "upgrade",
+            "type": "uint8"
+          }
+        ],
+        "name": "TileUpgraded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          }
+        ],
+        "name": "TileWalled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "time",
+            "type": "uint256"
+          }
+        ],
+        "name": "Time",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "claimResourcesOnRegion",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "enum LibTypes.Resource",
+            "name": "resourceType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "completeForceMineResourceTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "completeForceMineTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "completeUnwallTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "packedTiles",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "harvestTiles",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "initializePlayer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "initiateForceMineTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "initiateUnwallTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "enum LibTypes.Resource",
+            "name": "resourceType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "mineResourceTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "mineTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tileId",
+            "type": "uint256"
+          }
+        ],
+        "name": "removeUpgrade",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tileId",
+            "type": "uint256"
+          }
+        ],
+        "name": "removeWall",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tileId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum LibTypes.TileUpgrade",
+            "name": "upgrade",
+            "type": "uint8"
+          }
+        ],
+        "name": "upgradeTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "tileId",
+            "type": "uint256"
+          }
+        ],
+        "name": "wallTile",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ]
+  },
+  "SettlementFacet": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+          }
+        ],
+        "name": "DungeonHeartClaimed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "PlayerInfluenceInRegionUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Player",
+            "name": "data",
+            "type": "tuple"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          }
+        ],
+        "name": "PlayerInitialized",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Player",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "PlayerUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "miner",
+            "type": "address"
+          }
+        ],
+        "name": "RegionMined",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256[]",
+                "name": "tiles",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastSpawnTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "firstMiner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "creatures",
+                "type": "uint256[]"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Region",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "RegionUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "energy",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastEnergyUpdateTimestamp",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Settlement",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "SettlementUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          }
+        ],
+        "name": "TileClaimed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "submittedTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileDelayedActionType",
+                "name": "delayedActionType",
+                "type": "uint8"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.TileDelayedAction",
+            "name": "delayedAction",
+            "type": "tuple"
+          }
+        ],
+        "name": "TileDelayedActionCompleted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "submittedTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileDelayedActionType",
+                "name": "delayedActionType",
+                "type": "uint8"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.TileDelayedAction",
+            "name": "delayedAction",
+            "type": "tuple"
+          }
+        ],
+        "name": "TileDelayedActionInitiated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.HarvestableGroundResources",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "TileHarvestableGroundResourcesUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint32",
+            "name": "timestamp",
+            "type": "uint32"
+          }
+        ],
+        "name": "TileLastHarvestTimestampUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "touchable",
+            "type": "bool"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "miner",
+            "type": "address"
+          }
+        ],
+        "name": "TileMined",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          }
+        ],
+        "name": "TileUnwalled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "enum LibTypes.TileUpgrade",
+            "name": "upgrade",
+            "type": "uint8"
+          }
+        ],
+        "name": "TileUpgraded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "tile",
+            "type": "uint256"
+          }
+        ],
+        "name": "TileWalled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "time",
+            "type": "uint256"
+          }
+        ],
+        "name": "Time",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "claimSettlement",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "createSettlement",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "destroySettlement",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "upgradeSettlement",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ]
+  },
+  "CreaturesFacet": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "enum LibTypes.CreatureSpecies",
+                "name": "species",
+                "type": "uint8"
+              },
+              {
+                "internalType": "enum LibTypes.CreatureType",
+                "name": "creatureType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "life",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Creature[]",
+            "name": "squad1",
+            "type": "tuple[]"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum LibTypes.CreatureSpecies",
+                "name": "species",
+                "type": "uint8"
+              },
+              {
+                "internalType": "enum LibTypes.CreatureType",
+                "name": "creatureType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "life",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Creature[]",
+            "name": "squad2",
+            "type": "tuple[]"
+          },
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "initiator",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "target",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "int16",
+                    "name": "damage",
+                    "type": "int16"
+                  },
+                  {
+                    "internalType": "uint16",
+                    "name": "strengthMultiplier",
+                    "type": "uint16"
+                  },
+                  {
+                    "internalType": "int16",
+                    "name": "groupMultiplier",
+                    "type": "int16"
+                  }
+                ],
+                "internalType": "struct LibTypes.CombatAtomicTrace[]",
+                "name": "squad1Trace",
+                "type": "tuple[]"
+              },
+              {
+                "components": [
+                  {
+                    "internalType": "uint8",
+                    "name": "initiator",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "uint8",
+                    "name": "target",
+                    "type": "uint8"
+                  },
+                  {
+                    "internalType": "int16",
+                    "name": "damage",
+                    "type": "int16"
+                  },
+                  {
+                    "internalType": "uint16",
+                    "name": "strengthMultiplier",
+                    "type": "uint16"
+                  },
+                  {
+                    "internalType": "int16",
+                    "name": "groupMultiplier",
+                    "type": "int16"
+                  }
+                ],
+                "internalType": "struct LibTypes.CombatAtomicTrace[]",
+                "name": "squad2Trace",
+                "type": "tuple[]"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.RoundTrace[]",
+            "name": "trace",
+            "type": "tuple[]"
+          },
+          {
+            "indexed": false,
+            "internalType": "enum LibTypes.CombatWinner",
+            "name": "winner",
+            "type": "uint8"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "soulsDropped",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "Combat",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "creatureId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "CreatureDied",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "creatureId",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum LibTypes.CreatureSpecies",
+                "name": "species",
+                "type": "uint8"
+              },
+              {
+                "internalType": "enum LibTypes.CreatureType",
+                "name": "creatureType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "life",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Creature",
+            "name": "data",
+            "type": "tuple"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "fromRegionId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "toRegionId",
+            "type": "uint256"
+          }
+        ],
+        "name": "CreatureMovedToRegion",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "creatureId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "regionId",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "enum LibTypes.CreatureSpecies",
+                "name": "species",
+                "type": "uint8"
+              },
+              {
+                "internalType": "enum LibTypes.CreatureType",
+                "name": "creatureType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "life",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Creature",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "CreatureUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Player",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "PlayerUpdated",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "region",
+            "type": "uint256"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256[]",
+                "name": "tiles",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastSpawnTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "firstMiner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "creatures",
+                "type": "uint256[]"
+              }
+            ],
+            "indexed": false,
+            "internalType": "struct LibTypes.Region",
+            "name": "data",
+            "type": "tuple"
+          }
+        ],
+        "name": "RegionUpdated",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "packedPath",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "creatureIds",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "moveCreatures",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "_summonTileId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "enum LibTypes.CreatureSpecies",
+            "name": "_species",
+            "type": "uint8"
+          },
+          {
+            "internalType": "enum LibTypes.CreatureType",
+            "name": "_type",
+            "type": "uint8"
+          }
+        ],
+        "name": "spawnCreature",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ]
+  },
+  "GetterFacet": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "bulkGetCreaturesByIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "enum LibTypes.CreatureSpecies",
+                "name": "species",
+                "type": "uint8"
+              },
+              {
+                "internalType": "enum LibTypes.CreatureType",
+                "name": "creatureType",
+                "type": "uint8"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "life",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.Creature[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "bulkGetInfluenceDataByRegionIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address[]",
+                "name": "players",
+                "type": "address[]"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "influences",
+                "type": "uint256[]"
+              }
+            ],
+            "internalType": "struct LibTypes.InfluenceData[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetPlayerIds",
+        "outputs": [
+          {
+            "internalType": "address[]",
+            "name": "ret",
+            "type": "address[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetPlayers",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.Player[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address[]",
+            "name": "ids",
+            "type": "address[]"
+          }
+        ],
+        "name": "bulkGetPlayersByIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.Player[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetRegionIds",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ret",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetRegions",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256[]",
+                "name": "tiles",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastSpawnTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "firstMiner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "creatures",
+                "type": "uint256[]"
+              }
+            ],
+            "internalType": "struct LibTypes.Region[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "bulkGetRegionsByIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256[]",
+                "name": "tiles",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastSpawnTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "firstMiner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "creatures",
+                "type": "uint256[]"
+              }
+            ],
+            "internalType": "struct LibTypes.Region[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "bulkGetSettlementByIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "energy",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastEnergyUpdateTimestamp",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.Settlement[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetSettlementIds",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ret",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetSettlements",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "energy",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastEnergyUpdateTimestamp",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.Settlement[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "bulkGetTileDelayedActionsByTileIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "tileId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "initiator",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "submittedTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileDelayedActionType",
+                "name": "delayedActionType",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct LibTypes.TileDelayedAction[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "bulkGetTileHarvestableGroundResourcesByIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.HarvestableGroundResources[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetTileIds",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ret",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetTiles",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastHarvestTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileUpgrade",
+                "name": "upgrade",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bool",
+                "name": "touchable",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "isWalled",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct LibTypes.Tile[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ids",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "bulkGetTilesByIds",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastHarvestTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileUpgrade",
+                "name": "upgrade",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bool",
+                "name": "touchable",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "isWalled",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct LibTypes.Tile[]",
+            "name": "ret",
+            "type": "tuple[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetTilesWithDelayedActions",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ret",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "startIdx",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endIdx",
+            "type": "uint256"
+          }
+        ],
+        "name": "bulkGetTilesWithHarvestableGroundResources",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "ret",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getConstantTrustedForwarder",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "trustedForwarder",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getGameConstants",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "CAN_SPAWN",
+                "type": "bool"
+              },
+              {
+                "internalType": "uint256",
+                "name": "INITIAL_GOLD",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "INITIAL_SOULS",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "MAX_MANA",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "NUMBER_OF_SECONDS_FOR_ONE_MANA_REGEN",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16[2]",
+                "name": "MANA_PER_ACTION_TYPE",
+                "type": "uint16[2]"
+              },
+              {
+                "internalType": "uint16[2][3]",
+                "name": "SETTLEMENT_PRICE_PER_LEVEL",
+                "type": "uint16[2][3]"
+              },
+              {
+                "internalType": "uint16[4]",
+                "name": "SETTLEMENT_PRICE_PERCENT_INCREASE_PER_UNIT",
+                "type": "uint16[4]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "NUMBER_OF_SECONDS_FOR_ONE_ENERGY_REGEN",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16[3]",
+                "name": "MAX_ENERGY_PER_LEVEL",
+                "type": "uint16[3]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "GOLD_PER_GOLD_BLOCK",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "SOULS_PER_SOUL_BLOCK",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "GOLD_PERLIN_THRESHOLD",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "SOUL_PERLIN_THRESHOLD",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "SOUL_GROUND_RESOURCE_PERLIN_THRESHOLD",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "DRIP_AMOUNT",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "TIME_BETWEEN_DRIPS",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "WALL_PRICE",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16[8]",
+                "name": "TILE_UPGRADE_PRICES",
+                "type": "uint16[8]"
+              },
+              {
+                "internalType": "uint16[8]",
+                "name": "TILE_UPGRADE_PRICE_PERCENT_INCREASE_PER_UNIT",
+                "type": "uint16[8]"
+              },
+              {
+                "internalType": "uint16[8]",
+                "name": "INFLUENCE_PER_TILE_UPGRADE",
+                "type": "uint16[8]"
+              },
+              {
+                "internalType": "uint16[3]",
+                "name": "TILE_UPGRADE_GOLD_STORAGE",
+                "type": "uint16[3]"
+              },
+              {
+                "internalType": "uint16[3]",
+                "name": "TILE_UPGRADE_SOUL_STORAGE",
+                "type": "uint16[3]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "POPULATION_PER_LAIR",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "POPULATION_PER_DH",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16[4]",
+                "name": "HARVEST_BOOST_TRANCHES",
+                "type": "uint16[4]"
+              },
+              {
+                "internalType": "uint16[8]",
+                "name": "TILE_UPGRADE_NUMBER_OF_SECONDS_FOR_ONE_HARVEST",
+                "type": "uint16[8]"
+              },
+              {
+                "internalType": "uint16[8]",
+                "name": "TILE_UPGRADE_MAX_HARVEST",
+                "type": "uint16[8]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "MAX_SOULS_HARVESTED_PER_SOUL_TILE",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16[2][3]",
+                "name": "DELAYED_ACTIONS_MIN_SECOND_DELAY",
+                "type": "uint16[2][3]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "SECONDS_UNTIL_EXPIRED_DELAYED_ACTION",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "MIN_INFLUENCE_FOR_CONTROL",
+                "type": "uint256"
+              },
+              {
+                "internalType": "int256",
+                "name": "CREATURES_UNIQUE_GROUP_NEG_BOOST",
+                "type": "int256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "CREATURES_UNIQUE_STAT_MULTIPLIER",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint16[2][5][2]",
+                "name": "CREATURES_PRICE",
+                "type": "uint16[2][5][2]"
+              },
+              {
+                "internalType": "uint16[3][5][2]",
+                "name": "CREATURES_LEVEL_UP_PRICE",
+                "type": "uint16[3][5][2]"
+              },
+              {
+                "internalType": "uint16[4][2][2]",
+                "name": "CREATURES_BASE_STAT_PER_SPECIES",
+                "type": "uint16[4][2][2]"
+              },
+              {
+                "internalType": "uint16[5][5]",
+                "name": "CREATURES_TYPE_STRENGTH_AGAINST_TYPE",
+                "type": "uint16[5][5]"
+              },
+              {
+                "internalType": "uint16[4][2]",
+                "name": "CREATURES_INFLUENCE_PER_SPECIES_AND_LEVEL",
+                "type": "uint16[4][2]"
+              },
+              {
+                "internalType": "uint16[5]",
+                "name": "CREATURES_GROUP_MULTIPLIERS",
+                "type": "uint16[5]"
+              },
+              {
+                "internalType": "uint16[5][2]",
+                "name": "MAX_CREATURES_PER_SPECIES_AND_TYPES",
+                "type": "uint16[5][2]"
+              },
+              {
+                "internalType": "uint256",
+                "name": "CREATURES_MAX_NUMBER_OF_ROUNDS_PER_COMBAT",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "CREATURES_MAX_REGION_DISTANCE_FOR_MOVE",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "PERLIN_1_KEY",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "PERLIN_2_KEY",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "PERLIN_1_SCALE",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "PERLIN_2_SCALE",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.GameConstants",
+            "name": "constants",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getNPlayers",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "number",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getNRegions",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "number",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getNSettlements",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "number",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getNTiles",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "number",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getNTilesWithDelayedActions",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "number",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getNTilesWithHarvestableGroundResources",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "number",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "id",
+            "type": "address"
+          }
+        ],
+        "name": "getPlayer",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "bool",
+                "name": "isInitialized",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "player",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "initTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "population",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "mana",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastManaUpdateTimestamp",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxGold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxSouls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "maxPopulation",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.Player",
+            "name": "player",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "getRegion",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "uint256[]",
+                "name": "tiles",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastSpawnTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              },
+              {
+                "internalType": "address",
+                "name": "firstMiner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "gold",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "souls",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "creatures",
+                "type": "uint256[]"
+              }
+            ],
+            "internalType": "struct LibTypes.Region",
+            "name": "region",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "getSettlement",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "level",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "energy",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "lastEnergyUpdateTimestamp",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.Settlement",
+            "name": "settlement",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          }
+        ],
+        "name": "getTile",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+              },
+              {
+                "internalType": "uint32",
+                "name": "lastHarvestTimestamp",
+                "type": "uint32"
+              },
+              {
+                "internalType": "enum LibTypes.TileUpgrade",
+                "name": "upgrade",
+                "type": "uint8"
+              },
+              {
+                "internalType": "bool",
+                "name": "touchable",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "isWalled",
+                "type": "bool"
+              },
+              {
+                "internalType": "bool",
+                "name": "isMined",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct LibTypes.Tile",
+            "name": "tile",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getUniverseBoundaries",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "maxX",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "maxY",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+  },
+  "ConfigFacet": {
+    "abi": [
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "components": [
+                  {
+                    "internalType": "bool",
+                    "name": "CAN_SPAWN",
+                    "type": "bool"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "INITIAL_GOLD",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "INITIAL_SOULS",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "MAX_MANA",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "NUMBER_OF_SECONDS_FOR_ONE_MANA_REGEN",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint16[2]",
+                    "name": "MANA_PER_ACTION_TYPE",
+                    "type": "uint16[2]"
+                  },
+                  {
+                    "internalType": "uint16[2][3]",
+                    "name": "SETTLEMENT_PRICE_PER_LEVEL",
+                    "type": "uint16[2][3]"
+                  },
+                  {
+                    "internalType": "uint16[4]",
+                    "name": "SETTLEMENT_PRICE_PERCENT_INCREASE_PER_UNIT",
+                    "type": "uint16[4]"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "NUMBER_OF_SECONDS_FOR_ONE_ENERGY_REGEN",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint16[3]",
+                    "name": "MAX_ENERGY_PER_LEVEL",
+                    "type": "uint16[3]"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "GOLD_PER_GOLD_BLOCK",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "SOULS_PER_SOUL_BLOCK",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "GOLD_PERLIN_THRESHOLD",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "SOUL_PERLIN_THRESHOLD",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "SOUL_GROUND_RESOURCE_PERLIN_THRESHOLD",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "DRIP_AMOUNT",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "TIME_BETWEEN_DRIPS",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "WALL_PRICE",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint16[8]",
+                    "name": "TILE_UPGRADE_PRICES",
+                    "type": "uint16[8]"
+                  },
+                  {
+                    "internalType": "uint16[8]",
+                    "name": "TILE_UPGRADE_PRICE_PERCENT_INCREASE_PER_UNIT",
+                    "type": "uint16[8]"
+                  },
+                  {
+                    "internalType": "uint16[8]",
+                    "name": "INFLUENCE_PER_TILE_UPGRADE",
+                    "type": "uint16[8]"
+                  },
+                  {
+                    "internalType": "uint16[3]",
+                    "name": "TILE_UPGRADE_GOLD_STORAGE",
+                    "type": "uint16[3]"
+                  },
+                  {
+                    "internalType": "uint16[3]",
+                    "name": "TILE_UPGRADE_SOUL_STORAGE",
+                    "type": "uint16[3]"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "POPULATION_PER_LAIR",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "POPULATION_PER_DH",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint16[4]",
+                    "name": "HARVEST_BOOST_TRANCHES",
+                    "type": "uint16[4]"
+                  },
+                  {
+                    "internalType": "uint16[8]",
+                    "name": "TILE_UPGRADE_NUMBER_OF_SECONDS_FOR_ONE_HARVEST",
+                    "type": "uint16[8]"
+                  },
+                  {
+                    "internalType": "uint16[8]",
+                    "name": "TILE_UPGRADE_MAX_HARVEST",
+                    "type": "uint16[8]"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "MAX_SOULS_HARVESTED_PER_SOUL_TILE",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint16[2][3]",
+                    "name": "DELAYED_ACTIONS_MIN_SECOND_DELAY",
+                    "type": "uint16[2][3]"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "SECONDS_UNTIL_EXPIRED_DELAYED_ACTION",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "MIN_INFLUENCE_FOR_CONTROL",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "int256",
+                    "name": "CREATURES_UNIQUE_GROUP_NEG_BOOST",
+                    "type": "int256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "CREATURES_UNIQUE_STAT_MULTIPLIER",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint16[2][5][2]",
+                    "name": "CREATURES_PRICE",
+                    "type": "uint16[2][5][2]"
+                  },
+                  {
+                    "internalType": "uint16[3][5][2]",
+                    "name": "CREATURES_LEVEL_UP_PRICE",
+                    "type": "uint16[3][5][2]"
+                  },
+                  {
+                    "internalType": "uint16[4][2][2]",
+                    "name": "CREATURES_BASE_STAT_PER_SPECIES",
+                    "type": "uint16[4][2][2]"
+                  },
+                  {
+                    "internalType": "uint16[5][5]",
+                    "name": "CREATURES_TYPE_STRENGTH_AGAINST_TYPE",
+                    "type": "uint16[5][5]"
+                  },
+                  {
+                    "internalType": "uint16[4][2]",
+                    "name": "CREATURES_INFLUENCE_PER_SPECIES_AND_LEVEL",
+                    "type": "uint16[4][2]"
+                  },
+                  {
+                    "internalType": "uint16[5]",
+                    "name": "CREATURES_GROUP_MULTIPLIERS",
+                    "type": "uint16[5]"
+                  },
+                  {
+                    "internalType": "uint16[5][2]",
+                    "name": "MAX_CREATURES_PER_SPECIES_AND_TYPES",
+                    "type": "uint16[5][2]"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "CREATURES_MAX_NUMBER_OF_ROUNDS_PER_COMBAT",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "CREATURES_MAX_REGION_DISTANCE_FOR_MOVE",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "PERLIN_1_KEY",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "PERLIN_2_KEY",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "PERLIN_1_SCALE",
+                    "type": "uint256"
+                  },
+                  {
+                    "internalType": "uint256",
+                    "name": "PERLIN_2_SCALE",
+                    "type": "uint256"
+                  }
+                ],
+                "internalType": "struct LibTypes.GameConstants",
+                "name": "gameConstants",
+                "type": "tuple"
+              },
+              {
+                "internalType": "uint256",
+                "name": "numberOfRegionsPerSide",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct LibTypes.InitArgs",
+            "name": "initArgs",
+            "type": "tuple"
+          }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bool",
+            "name": "paused",
+            "type": "bool"
+          }
+        ],
+        "name": "setPaused",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "forwarder",
+            "type": "address"
+          }
+        ],
+        "name": "setTrustedForwarder",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      }
+    ]
+  },
+  "BankFacet": {
+    "abi": [
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "name": "DripSent",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "dripToPlayer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getDripAmount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "amount",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          }
+        ],
+        "name": "getLastDrip",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "lastDrip",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getTimeBetweenDrips",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "time",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "player",
+            "type": "address"
+          }
+        ],
+        "name": "getTotalDrip",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "totalDrip",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "forwarder",
+            "type": "address"
+          }
+        ],
+        "name": "isTrustedForwarder",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "versionRecipient",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "",
+            "type": "string"
+          }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+      }
+    ]
+  }
+}

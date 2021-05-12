@@ -1,0 +1,71 @@
+{
+  "name": "ember-monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=14 <=16"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "eth",
+      "dev-bootloader",
+      "client"
+    ],
+    "nohoist": [
+      "**/@typechain",
+      "**/@typechain/**"
+    ]
+  },
+  "scripts": {
+    "prepare": "if [ -z ${CI+x} ]; then (yarn patch-gsn && yarn husky-run install && yarn workspaces run prepare); else echo 'Skipping prepare'; fi",
+    "test": "yarn workspaces run test",
+    "lint": "yarn workspaces run lint",
+    "format": "yarn workspaces run format",
+    "start": "run-pty % yarn start-node % yarn start-web % yarn start-dev-bootloader",
+    "clean": "bash scripts/clean.sh",
+    "// internal scripts only": "",
+    "patch-gsn": "sed -i '' \"s/logLevel: 'error',/logLevel: 'error',\r\t\t\tsuccessfulRoundsForReady: 0,/\" node_modules/@opengsn/cli/dist/GsnTestEnvironment.js && sed -i '' \"s/checkInterval: 100/checkInterval: 600/\" node_modules/@opengsn/cli/dist/GsnTestEnvironment.js && sed -i '' \"s/sleepMs: 100/sleepMs: 1000/\" node_modules/@opengsn/cli/dist/GsnTestEnvironment.js",
+    "start-node": "yarn clean-dev-build && run-p -l start-hardhat-node start-gsn-local setup-paymaster-and-forwarder-local export-contracts",
+    "start-hardhat-node": "yarn workspace eth hardhat:node",
+    "start-gsn-local": "([[ -z \"${USE_GSN}\" ]] || (wait-on tcp:8545 && yarn workspace eth gsn start))",
+    "setup-paymaster-and-forwarder-local": "([[ -z \"${USE_GSN}\" ]] || (wait-on eth/build/gsn && yarn setup-paymaster-local && yarn setup-trusted-forwarder-local))",
+    "setup-paymaster-local": "wait-on tcp:8545 && yarn workspace eth deploy-and-setup-paymaster-locally",
+    "setup-trusted-forwarder-local": "wait-on tcp:8545 && wait-on eth/build/gsn && yarn workspace eth set-forwarder-locally",
+    "clean-dev-build": "(rm -r eth/build/gsn || true) && (rm -r client/public/abi.json || true) && (rm -r dev-bootloader/public/contracts.json || true) && (rm -r eth/deployments/localhost || true)",
+    "start-web": "wait-on tcp:8545 && wait-on client/public/abi.json && yarn workspace client dev",
+    "start-dev-bootloader": "wait-on tcp:8545 && wait-on dev-bootloader/public/contracts.json && yarn workspace dev-bootloader dev",
+    "export-contracts": "wait-on tcp:8545 && ([[ -z \"${USE_GSN}\" ]] || wait-on eth/deployments/localhost/Paymaster.json) && yarn workspace eth run export && yarn workspace eth run export-dev-bootloader"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.2.0",
+    "@typescript-eslint/parser": "^3.2.0",
+    "concurrently": "^5.3.0",
+    "eslint": "^7.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "husky": "^4.3.5",
+    "lint-staged": ">=10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "run-pty": "^2.3.2",
+    "typescript": "^3.9.7",
+    "wait-on": "^4.0.2"
+  },
+  "lint-staged": {
+    "eth/**/*.{ts,sol}": [
+      "yarn workspace eth run format"
+    ],
+    "client/**/*.{tsx,ts}": [
+      "yarn workspace client run format",
+      "yarn workspace client run lint"
+    ],
+    "dev-bootloader/**/*.{tsx,ts}": [
+      "yarn workspace client run format",
+      "yarn workspace client run lint"
+    ]
+  },
+  "dependencies": {}
+}

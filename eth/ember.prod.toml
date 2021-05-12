@@ -1,0 +1,125 @@
+[initializers.gameConstants]
+CAN_SPAWN = true
+# Player Init
+INITIAL_GOLD = 250
+INITIAL_SOULS = 5
+# Mana
+MAX_MANA = 10000
+NUMBER_OF_SECONDS_FOR_ONE_MANA_REGEN = 1
+MANA_PER_ACTION_TYPE = [
+  # Mine
+  50, 
+  # Upgrade
+  50,
+]
+# Settlement
+SETTLEMENT_PRICE_PER_LEVEL = [
+  # price of a new settlement
+  [1000, 3],
+  [500, 2],
+  [4000, 20]
+]
+# First value should always be 100
+SETTLEMENT_PRICE_PERCENT_INCREASE_PER_UNIT = [100, 200, 400, 800]
+NUMBER_OF_SECONDS_FOR_ONE_ENERGY_REGEN = 1
+MAX_ENERGY_PER_LEVEL = [10, 20, 40]
+# Mining
+GOLD_PER_GOLD_BLOCK = 20
+SOULS_PER_SOUL_BLOCK = 1
+SOUL_PERLIN_THRESHOLD = 42
+SOUL_GROUND_RESOURCE_PERLIN_THRESHOLD = 44
+GOLD_PERLIN_THRESHOLD = 41
+# Bank
+DRIP_AMOUNT = "20000000000000000"
+TIME_BETWEEN_DRIPS = 1800
+# Upgrades
+WALL_PRICE = 20
+TILE_UPGRADE_PRICES = [0, 0, 40, 10, 100, 50, 20, 100]
+TILE_UPGRADE_PRICE_PERCENT_INCREASE_PER_UNIT = [0, 0, 10, 10, 10, 10, 10, 10]
+INFLUENCE_PER_TILE_UPGRADE = [1, 0, 0, 0, 0, 0, 0, 0]
+# Dungeon Heart, Gold Storage, Soul Storage
+TILE_UPGRADE_GOLD_STORAGE = [1000, 250, 0]
+TILE_UPGRADE_SOUL_STORAGE = [8, 0, 4]
+POPULATION_PER_LAIR = 1
+POPULATION_PER_DH = 1
+# Harvest
+HARVEST_BOOST_TRANCHES = [25, 75, 100, 50]
+TILE_UPGRADE_NUMBER_OF_SECONDS_FOR_ONE_HARVEST = [0, 0, 10, 0, 120, 0, 15, 0]
+TILE_UPGRADE_MAX_HARVEST = [0, 0, 250, 0, 25, 0, 25, 0]
+MAX_SOULS_HARVESTED_PER_SOUL_TILE = 8
+MAX_GROUND_BYTE_VALUE_TO_BE_SOUL_TILE = 16
+# Delayed actions
+# TileDelayedActionType -> bool -> uint256
+DELAYED_ACTIONS_MIN_SECOND_DELAY = [
+  # WALL
+  [60, 0],
+  # UNWALL
+  [10, 150],
+  # FORCE_MINE
+  [10, 100],
+]
+SECONDS_UNTIL_EXPIRED_DELAYED_ACTION = 256
+# Influence
+MIN_INFLUENCE_FOR_CONTROL = 1
+# Creatures
+CREATURES_UNIQUE_STAT_MULTIPLIER = 5
+CREATURES_UNIQUE_GROUP_NEG_BOOST = -90
+# CreatureSpecies -> CreatureType -> (gold, souls)
+CREATURES_PRICE = [[[20, 1], [30, 2], [30, 2], [30, 2], [40, 3]], [[0, 0], [0, 0], [0, 0], [0, 0], [200, 12]]]
+# CreatureSpecies -> CreatureType -> 3 upgrades -> uint256
+CREATURES_LEVEL_UP_PRICE = [
+  [[20, 50, 250], [60, 100, 300], [60, 100, 300], [60, 100, 300], [100, 200, 500]], 
+  [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0], [400, 1000, 2000]]
+]
+# CreatureSpecies -> ATK/LIFE -> value
+CREATURES_BASE_STAT_PER_SPECIES = [[[20, 30, 50, 100], [100, 150, 200, 400]], [[10, 20, 30, 50], [200, 400, 600, 1000]]]
+# CreaturesType -> CreaturesType -> value;
+CREATURES_TYPE_STRENGTH_AGAINST_TYPE = [
+  [
+    0,
+    0,
+    0,
+    0,
+    200,
+  ],
+  [
+    20,
+    0,
+    40,
+    0,
+    0,
+  ],
+  [
+    20,
+    0,
+    0,
+    40,
+    0,
+  ],
+  [
+    20,
+    40,
+    0,
+    0,
+    0,
+  ],
+  [
+    0,
+    0,
+    0,
+    0,
+    0,
+  ],
+]
+# CreatureSpecies -> 0-3 -> value
+CREATURES_INFLUENCE_PER_SPECIES_AND_LEVEL = [[100, 100, 100, 100], [100, 100, 100, 100]]
+CREATURES_GROUP_MULTIPLIERS = [0, 10, 20, 30, 40]
+MAX_CREATURES_PER_SPECIES_AND_TYPES = [[256, 256, 256, 256, 1], [0, 0, 0, 0, 1]]
+CREATURES_MAX_NUMBER_OF_ROUNDS_PER_COMBAT = 30
+CREATURES_MAX_REGION_DISTANCE_FOR_MOVE = 2
+PERLIN_1_KEY = 43
+PERLIN_2_KEY = 44
+PERLIN_1_SCALE = 1
+PERLIN_2_SCALE = 1
+[initializers]
+numberOfRegionsPerSide = 64

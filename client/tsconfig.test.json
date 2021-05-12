@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "lib": ["es2017", "dom", "esnext"],
+    "declaration": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "inlineSourceMap": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true
+    // "typeRoots": ["./node_modules/@types"]
+  },
+  "include": ["src/**/*.ts"]
+}

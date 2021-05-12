@@ -1,0 +1,2930 @@
+{
+	"textures": [
+		{
+			"image": "loadingScreen-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1930,
+				"h": 1962
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "LoadScreen1.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen10.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen100.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen101.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen102.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen103.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen104.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen105.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen106.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen107.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen108.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen109.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen11.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen110.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen111.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen112.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen113.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen114.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen115.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen116.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen117.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen118.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen119.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen12.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen120.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen121.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen122.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen123.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen124.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen125.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen126.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen127.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen128.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen129.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen13.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen130.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen131.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen132.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen133.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen134.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen135.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen136.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen137.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen14.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen15.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				}
+			]
+		},
+		{
+			"image": "loadingScreen-1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1930,
+				"h": 1962
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "LoadScreen16.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen17.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen18.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen19.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen2.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen20.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen21.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen22.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen23.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen24.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen25.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen26.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen27.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen28.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen29.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen3.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen30.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen31.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen32.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen33.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen34.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen35.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen36.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen37.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen38.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen39.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen4.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen40.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen41.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen42.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen43.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen44.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen45.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen46.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen47.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen48.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen49.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen5.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen50.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen51.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen52.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen53.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen54.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen55.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen56.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				}
+			]
+		},
+		{
+			"image": "loadingScreen-2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1930,
+				"h": 1962
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "LoadScreen57.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen58.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen59.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen6.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen60.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen61.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen62.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen63.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen64.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen65.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 219,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen66.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen67.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen68.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen69.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen7.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen70.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen71.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen72.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen73.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen74.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen75.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 437,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen76.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen77.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen78.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen79.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 655,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen8.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen80.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen81.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen82.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen83.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen84.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen85.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen86.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 873,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen87.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen88.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen89.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1091,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen9.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen90.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen91.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 773,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen92.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen93.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1309,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen94.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen95.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1159,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen96.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1527,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen97.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1545,
+						"y": 1745,
+						"w": 384,
+						"h": 216
+					}
+				}
+			]
+		},
+		{
+			"image": "loadingScreen-3.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 772,
+				"h": 218
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "LoadScreen98.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				},
+				{
+					"filename": "LoadScreen99.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 384,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 384,
+						"h": 216
+					},
+					"frame": {
+						"x": 387,
+						"y": 1,
+						"w": 384,
+						"h": 216
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:75750588628c6abad4fa3e811550520e:13b10d1783cd0bf8d5a3729970621184:7e65464ba58da4d4a46f9f51ddc01ed5$"
+	}
+}

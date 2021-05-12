@@ -1,0 +1,16 @@
+node_modules/*
+yarn-error.log
+.gitkeep
+*.env
+.env.prod
+
+.openzeppelin/unknown-*.json
+!.openzeppelin/unknown-100.json
+.openzeppelin/.session
+deployments
+build/gsn
+typechain
+
+#Hardhat files
+cache
+artifacts

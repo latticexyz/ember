@@ -1,0 +1,7 @@
+node_modules
+yarn-error.log
+.DS_Store
+.vscode/settings.json
+
+# Local Netlify folder
+.netlify
