@@ -1,0 +1,27 @@
+{
+  "name": "@latticexyz/ember-combat",
+  "version": "0.0.1",
+  "license": "GPL-3.0",
+  "engines": {
+    "node": ">=14 <=16"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "src/index.ts"
+  ],
+  "scripts": {
+    "prepare": "tsc -p .",
+    "test": "exit 0",
+    "lint": "eslint",
+    "format": "prettier --write"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "ethers": "^5.0.7"
+  }
+}

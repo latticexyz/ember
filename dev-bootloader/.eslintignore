@@ -1,0 +1,7 @@
+public/
+declarations/
+*.min.js
+*.d.ts
+
+*/**/dist/
+*/**/typechain/

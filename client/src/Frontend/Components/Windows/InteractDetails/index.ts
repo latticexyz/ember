@@ -1,0 +1,1 @@
+export { InteractDetails } from "./InteractDetails";
